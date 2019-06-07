@@ -36,6 +36,16 @@
             background-color: #E7DFDD
           }
         </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131425208-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131425208-3');
+</script>
+
     </head>
     <body>
 
@@ -170,18 +180,14 @@
         <article class="tile is-child notification is-light">
           <p class="title">My Website</p>
           <p class="subtitle">This website is written using Django and Bulma. Live at <a href="https://jeetendra.pw">jeetendra.pw</a></p>
-          <figure class="image is-512x512">
-            <img src="{%static 'mywebsite.jpg'%}">
-          </figure>
+          
         </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-light">
           <p class="title">My Blog</p>
           <p class="subtitle">I made a technical blog website using Django. Live at <a href="/blog">Jeetendra's Blog</a></p>
-          <figure class="image is-512x512">
-            <img src="{% static 'myblog.jpg' %}">
-          </figure>
+         
         </article>
       </div>
     </div>
