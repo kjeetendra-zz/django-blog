@@ -25,14 +25,8 @@ class Topic(models.Model):
 
 class Post(models.Model):
 
-    @classmethod
-    def generate_slug(cls):
-        x = "".join(random.choices(string.ascii_letters+string.digits,k=5))
-        if Post.objects.filter(slug=x).exists():
-            x = "".join(random.choices(string.ascii_letters + string.digits, k=5))
-        return x
-
-    slug = models.SlugField(max_length=30, unique=True,default=lambda: Post.generate_slug())
+    
+    slug = models.SlugField(max_length=30, unique=True)
     postName = models.CharField(max_length=200)
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(null=True)
